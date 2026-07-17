@@ -1,17 +1,32 @@
 cask "alexandria" do
-  version "0.1.25"
-  sha256 "b05b726acbfa5545190e3c25613d747873640404fff4aae5ea5d6bc28f5cc5fe"
+  version "0.1.27"
+  sha256 "487b0412440dda8d778cc2e7c8a9eebfe5b98d1ea23b32650a54dce9587dbd71"
 
-  url "https://github.com/madhavajay/alex/releases/download/v0.1.25/AlexandriaBar-0.1.25.dmg"
-  name "Alexandria"
+  url "https://github.com/madhavajay/alex/releases/download/v#{version}/Alex-#{version}.dmg"
+  name "Alex"
   desc "Menu bar app for the Alex local LLM subscription router"
   homepage "https://github.com/madhavajay/alex"
 
   depends_on formula: "madhavajay/alex/alex"
 
-  app "AlexandriaBar.app"
+  app "Alex.app"
 
-  uninstall quit: "com.madhavajay.alexandria-macos"
+  # Tolerate the app already being gone (e.g. replaced by a direct DMG install,
+  # or the pre-rename AlexandriaBar.app): quitting a not-running bundle id is a
+  # no-op, and the trash/delete uninstall stanzas do not error on missing paths.
+  uninstall quit:   "com.madhavajay.alex",
+            delete: [
+              "/Applications/Alex.app",
+              "/Applications/AlexandriaBar.app",
+            ]
+
+  zap trash: [
+    "~/Library/Application Support/com.madhavajay.alex",
+    "~/Library/Caches/com.madhavajay.alex",
+    "~/Library/Preferences/com.madhavajay.alex.plist",
+    "~/Library/HTTPStorages/com.madhavajay.alex",
+    "~/Library/Saved Application State/com.madhavajay.alex.savedState",
+  ]
 
   livecheck do
     url :stable
