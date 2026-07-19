@@ -1,8 +1,8 @@
 cask "alexandria" do
-  version "0.1.27"
-  sha256 "487b0412440dda8d778cc2e7c8a9eebfe5b98d1ea23b32650a54dce9587dbd71"
+  version "0.1.28"
+  sha256 "49ace0d3958ce93818de43b0586099a4b1ce3fc4102e1a60c2752eec86d0f721"
 
-  url "https://github.com/madhavajay/alex/releases/download/v#{version}/Alex-#{version}.dmg"
+  url "https://github.com/madhavajay/alex/releases/download/v0.1.28/Alex-0.1.28.dmg"
   name "Alex"
   desc "Menu bar app for the Alex local LLM subscription router"
   homepage "https://github.com/madhavajay/alex"
@@ -11,9 +11,9 @@ cask "alexandria" do
 
   app "Alex.app"
 
-  # Tolerate the app already being gone (e.g. replaced by a direct DMG install,
-  # or the pre-rename AlexandriaBar.app): quitting a not-running bundle id is a
-  # no-op, and the trash/delete uninstall stanzas do not error on missing paths.
+  # Tolerate the app already being gone (replaced by a direct DMG install, or
+  # the pre-rename AlexandriaBar.app): quitting a not-running bundle id is a
+  # no-op and delete/trash do not error on missing paths.
   uninstall quit:   "com.madhavajay.alex",
             delete: [
               "/Applications/Alex.app",

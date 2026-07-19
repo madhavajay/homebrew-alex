@@ -1,25 +1,25 @@
 class Alex < Formula
   desc "Local LLM subscription router: credential vault, proxy, trace capture"
   homepage "https://github.com/madhavajay/alex"
-  version "0.1.27"
+  version "0.1.28"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/madhavajay/alex/releases/download/v0.1.27/alex-cli-0.1.27-macos-aarch64.tar.gz"
-      sha256 "986bb53860d57e81de325780d18a25a0060878d2ff110c48b11e88b6ed1469e4"
+      url "https://github.com/madhavajay/alex/releases/download/v0.1.28/alex-cli-0.1.28-macos-aarch64.tar.gz"
+      sha256 "e4fe606283a85e387eb973b7ef7b25bb0bed03a42c2112cc6cd16aa54fdc8e1f"
     end
 
     on_intel do
-      url "https://github.com/madhavajay/alex/releases/download/v0.1.27/alex-cli-0.1.27-macos-x86_64.tar.gz"
-      sha256 "cb833f36df7e9556e44e719b5c5495b1e03d926d25cd820c0fb37364e8622312"
+      url "https://github.com/madhavajay/alex/releases/download/v0.1.28/alex-cli-0.1.28-macos-x86_64.tar.gz"
+      sha256 "981ded1bba7dba4544b1a62162930340004e548782376e134ece05a5a161fcb5"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/madhavajay/alex/releases/download/v0.1.27/alex-cli-0.1.27-linux-x86_64.tar.gz"
-      sha256 "2cc9a9e896b57e184e342270bdd3d64c9a26c524202e1f3e934c06e8bd09a22e"
+      url "https://github.com/madhavajay/alex/releases/download/v0.1.28/alex-cli-0.1.28-linux-x86_64.tar.gz"
+      sha256 "45335037a77f16f0bca5dfa48c5a2ffb30ee5b93a295fcac7678798eeeaae0b4"
     end
   end
 
