@@ -1,8 +1,8 @@
 cask "alex" do
-  version "0.1.29"
-  sha256 "994bc0073e59f517efefc5964516cd30536c1ab023ff05ead8ea00ba71b9032f"
+  version "0.1.30"
+  sha256 "893d1366c6932b300c386d127e4e12a04edc12af9da2e876fad69aeb84421138"
 
-  url "https://github.com/madhavajay/alex/releases/download/v0.1.29/Alex-0.1.29.dmg"
+  url "https://github.com/madhavajay/alex/releases/download/v0.1.30/Alex-0.1.30.dmg"
   name "Alex"
   desc "Menu bar app for the Alex local LLM subscription router"
   homepage "https://github.com/madhavajay/alex"
